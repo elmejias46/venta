@@ -1,0 +1,37 @@
+spring:
+  application.name: gestion-cobros-service
+  datasource:
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    show-sql: true
+    hibernate:
+      dialect: org.hibernate.dialect.SQLServer2012Dialect
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  flyway:
+    enabled: true
+    validate-on-migrate: true
+    baselineOnMigrate: true
+    baselineVersion: 0.0.0
+    locations: [ classpath:db ]
+            
+server:
+  servlet.context-path: /ventas/api
+  port: 9060
+
+app:
+  auth:
+    user1: externalProvider
+  jwt:
+    expirationMs: 9000000
+    
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

@@ -1,0 +1,25 @@
+spring:
+  application.name: gestion-cobros-service
+  profiles:
+    active: test
+  jpa:
+    properties:
+      hibernate:
+        show_sql: false
+        ddl-auto: none
+        dialeact: org.hibernate.dialect.H2Dialect
+        open-in-view: true
+  flyway:
+    enabled: false
+     
+server:
+  servlet.context-path: /gestionventas/api
+  port: 9060
+
+app:
+  auth:
+    user1: externalProvider
+    password1: 12313-12543535-9888756575
+  jwt:
+    expirationMs: 9000000
+    signingKey: eyJSb2-xlIjoiQ-WRtaW4-iLCJJc3N-1ZXIiOi-JJc3N1ZX-IiLCJVc2Vy

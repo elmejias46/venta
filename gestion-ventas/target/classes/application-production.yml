@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://192.168.50.140;databaseName=OTROS;sslProtocol=TLSv1.2;encrypt=true;trustServerCertificate=true
+    username: ICGAdmin
+    password: masterkey
+flyway:
+  url: jdbc:sqlserver://192.168.50.140;databaseName=OTROS;sslProtocol=TLSv1.2;encrypt=true;trustServerCertificate=true
+  user: ICGAdmin
+  password: masterkey
+
+app:
+  auth:
+    password1: 12313-12543535-9888756575
+    password2: 9888756575-12313-12543535
+  jwt:
+    signingKey: eyJSb2-xlIjoiQ-WRtaW4-XPROX-1ZXIiOi-JJc3N1ZX-IiLCJVc2Vy
